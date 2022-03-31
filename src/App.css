@@ -1,3 +1,7 @@
+* {
+  /* font-family: "Luckiest Guy", cursive; */
+  font-family: "Heebo", sans-serif;
+}
 .App {
   text-align: center;
 }

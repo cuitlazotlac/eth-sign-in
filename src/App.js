@@ -1,12 +1,15 @@
 import { useState } from "react";
 import "./App.css";
 
+import Footer from "./components/Footer";
+
 import CeramicClient from "@ceramicnetwork/http-client";
 import ThreeIdResolver from "@ceramicnetwork/3id-did-resolver";
 
 import { EthereumAuthProvider, ThreeIdConnect } from "@3id/connect";
 import { DID } from "dids";
 import { IDX } from "@ceramicstudio/idx";
+import HeroSection from "./components/HeroSection";
 
 const endpoint = "https://ceramic-clay.3boxlabs.com";
 
@@ -66,6 +69,7 @@ function App() {
 
   return (
     <div className="App">
+      <HeroSection />
       <input placeholder="Name" onChange={(e) => setName(e.target.value)} />
       <input
         placeholder="Profile Image"
@@ -77,6 +81,7 @@ function App() {
       {name && <h3>{name}</h3>}
       {image && <img style={{ width: "400px" }} src={image} alt="avatar" />}
       {!image && !name && loaded && <h4>No profile, please create one...</h4>}
+      <Footer />
     </div>
   );
 }
