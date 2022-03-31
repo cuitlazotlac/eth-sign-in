@@ -7,22 +7,31 @@ export default function Footer() {
       <div className="container">
         <div className="footer__col1">
           <h1 className="footer__col1__title">Second Footer</h1>
-          <p>Footer</p>
           <br />
+          <button>Documentation</button>
         </div>
-        <div className="footer__col2"></div>
+        <div className="footer__col2">
+          <h1 className="footer__col2__title">Second Footer</h1>
+          <br />
+          <button>Documentation</button>
+        </div>
       </div>
     </FooterStyle>
   );
 }
 
 const FooterStyle = styled.div`
-  background-color: var(--secondary-color);
-  // background-image: url("https://drive.google.com/file/d/1rerm1A_hlBCtEcayZP7vnHkSfjWYHaLS/view?usp=sharing");
-  // background-image: url(${"logo"});
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background-color: blue;
+  // background-color: var(--brand-color);ß
   background-position: center;
   background-size: cover;
-  padding-top: 5rem;
+  padding-top: 2rem;
   padding-bottom: 5rem;
   font-size: 1.5rem;
   .container {
@@ -37,8 +46,9 @@ const FooterStyle = styled.div`
   .footer__col4 {
     flex: 1;
   }
-  .footer__col1__title {
-    font-size: 3rem;
+  .footer__col1__title,
+  .footer__col2__title {
+    font-size: 1.7rem;
     margin-bottom: 1rem;
   }
   @media only screen and (max-width: 768px) {
