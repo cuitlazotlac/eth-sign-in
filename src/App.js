@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
+import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
 
 import CeramicClient from "@ceramicnetwork/http-client";
@@ -9,7 +10,6 @@ import ThreeIdResolver from "@ceramicnetwork/3id-did-resolver";
 import { EthereumAuthProvider, ThreeIdConnect } from "@3id/connect";
 import { DID } from "dids";
 import { IDX } from "@ceramicstudio/idx";
-import HeroSection from "./components/HeroSection";
 
 const endpoint = "https://ceramic-clay.3boxlabs.com";
 

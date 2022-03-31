@@ -1,46 +1,96 @@
 import React from "react";
 import styled from "styled-components";
+
+import HeroImg from "../assets/images/logo_id.svg";
+import Typical from "../components/Typical";
 // import Button from "./Button";
 // import SocialMediaArrow from "../assets/images/scroll-media-arrow.svg";
 // import ScrollDownArrow from "../assets/images/scroll-down-arrow.svg";
 
-// import { FaBehanceSquare } from "react-icons/fa";
-// import { FaGithubSquare } from "react-icons/fa";
-// import { FaLinkedin } from "react-icons/fa";
-// import { FaMailBulk } from "react-icons/fa";
+import { FaCircleNotch } from "react-icons/fa";
+import { FaGithubSquare } from "react-icons/fa";
+import { FaMailBulk } from "react-icons/fa";
 
 // import Typical from "../components/shared/Typical";
 
 export default function HeroSection() {
   return (
     <HeroStyles>
-      <div className="hero__heading">Here goes my title</div>
+      <div className="hero">
+        <div className="hero__img">
+          <img src={HeroImg} alt="" />
+        </div>
+        {/* <div className="hero__heading">whoami.</div> */}
+        <h1 className="hero__heading">
+          <span className="hero__name">whoami.</span>
+          <span>
+            <Typical
+              as="h3"
+              main_title="Title1"
+              title_1="Title2"
+              title_2="Title3"
+              title_3="Title4"
+              title_4="Title5"
+              title_5="Title6"
+            />
+          </span>
+        </h1>
+      </div>
+      <div className="hero__social">
+        <div className="hero__social__text">
+          <ul>
+            <li>
+              <a
+                href="https://github.com/cuitlazotlac"
+                target="_blank"
+                rel="noreferrer"
+                className="icon"
+              >
+                <FaGithubSquare />
+              </a>
+            </li>
+            <li>
+              <a href="https:/heyhayssem.dev" target="_blank" rel="noreferrer">
+                <FaCircleNotch />
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:heyhayssem@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaMailBulk />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </HeroStyles>
   );
 }
 
 const HeroStyles = styled.div`
   .hero {
-    height: 100vh;
-    min-height: 1000px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    // height: 35vh;
+    // width: 100%;
+    // text-align: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // position: relative;
   }
   .hero__heading {
-    text-align: left;
-    font-size: 2.4rem;
-    span {
-      display: inline-block;
-      width: 100%;
-    }
-    .hero__name {
-      font-size: 5rem;
-      color: var(--brand-color);
-    }
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 7rem;
+    font-family: var(--display-font);
+  }
+  .hero__img {
+    margin-top: 5rem;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .hero__info {
     margin-top: 5rem;
@@ -55,7 +105,7 @@ const HeroStyles = styled.div`
     flex-direction: column;
     gap: 2rem;
     position: absolute;
-    bottom: 20px;
+    // bottom: 20px;
     width: 50px;
   }
   .hero__social {
@@ -99,62 +149,10 @@ const HeroStyles = styled.div`
       }
     }
   }
-  @media only screen and (min-width: 768px) and (max-width: 1400px) {
-    padding: 10rem 0;
-    .hero {
-      min-height: 750px;
-    }
-    .hero__heading {
-      font-size: 1.7rem;
-      margin-bottom: -3rem;
-      .hero__name {
-        font-size: 4.5rem;
-      }
-    }
-    .hero__img {
-      height: 300px;
-    }
-    .hero__info {
-      margin-top: 3rem;
-    }
-    .hero__social {
-      left: -5px;
-      bottom: -15%;
-      width: 20px;
-      .hero__social__indicator {
-        width: 20px;
-        p {
-          font-size: 1.2rem;
-        }
-        img {
-          max-height: 22px;
-        }
-      }
-      .hero__social__text {
-        ul {
-          li {
-            a {
-              font-size: 1.8rem;
-              margin-bottom: 1rem;
-            }
-          }
-        }
-      }
-    }
-    .hero__scrollDown {
-      right: 0;
-      width: 20px;
-      gap: 1rem;
-      p {
-        font-size: 1.3rem;
-      }
-    }
-  }
-
   @media only screen and (max-width: 768px) {
     padding: 10rem 0;
     .hero {
-      min-height: 750px;
+      // min-height: 750px;
     }
     .hero__heading {
       font-size: 1.7rem;

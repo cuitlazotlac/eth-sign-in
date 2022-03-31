@@ -1,31 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-.light-theme{
-  --background-color: #FFFFF;
-  --secondary-color: #F5EFEB;
-  --third-color: #1F2124;
-  --shadow-color: #3C3C3C;
-  --font-color: #000000;
-  --brand-color: #01E3B4;
-  --btn-color: #EDF2F6;
-  --btn-border-color: #000000;
-}
-.dark-theme{
-  --background-color: #001421;
-  --secondary-color: #082235;
-  --third-color: #5B5C5D;
-  --shadow-color: #4D638D;
-  --font-color: #EDF2F6;
-  --brand-color: #01E3B4;
-  --btn-color: #001421;
-  --btn-border-color: #CCD0D3;
-}
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    --brand-color: #D4F407;
+    --border-color: #000000;
   }
   :root{
     --white : #FFFFF;
@@ -53,7 +35,27 @@ const GlobalStyles = createGlobalStyle`
     object-fit: cover;
   }
   button{
-    outline: none
+    font-size: 1.7rem;
+    font-weight: 400;
+    background-color: var(--brand-color);
+    border: 1px solid var(--btn-border-color);
+    border-radius: 1px;
+    display: inline-block;
+    color: var(--font-color);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4), 0px 0px 50px rgba(0, 0, 0, 0);
+    transform-style: preserve-3d;
+    padding: 1rem;
+    overflow: hidden;
+    &:hover {
+      color: var(--font-color);
+      background-color: var(--primary-color);
+      transform: scale(1.1);
+      transform: translate(7px, -7px);
+      transform-style: preserve-3d;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 5px 10px var(--shadow-color);
+    }
   }
   .container {
     max-width: 1200px;
