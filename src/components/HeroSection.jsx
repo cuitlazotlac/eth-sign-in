@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import HeroImg from "../assets/images/logo_id.svg";
+import HeroImg from "../assets/images/logo.svg";
 import Typical from "../components/Typical";
 // import Button from "./Button";
 // import SocialMediaArrow from "../assets/images/scroll-media-arrow.svg";
@@ -26,12 +26,9 @@ export default function HeroSection() {
           <span>
             <Typical
               as="h3"
-              main_title="Title1"
-              title_1="Title2"
-              title_2="Title3"
-              title_3="Title4"
-              title_4="Title5"
-              title_5="Title6"
+              title_1="Identity Management System"
+              title_2="Sign In with Ethereum"
+              title_3="#DecentralizedIdentity"
             />
           </span>
         </h1>
@@ -81,14 +78,14 @@ const HeroStyles = styled.div`
     // position: relative;
   }
   .hero__heading {
-    margin-top: 5rem;
+    margin-top: 2rem;
     text-align: center;
-    font-size: 7rem;
+    font-size: 5rem;
     font-family: var(--display-font);
   }
   .hero__img {
     margin-top: 5rem;
-    width: 25%;
+    width: 7%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -150,58 +147,20 @@ const HeroStyles = styled.div`
     }
   }
   @media only screen and (max-width: 768px) {
-    padding: 10rem 0;
-    .hero {
-      // min-height: 750px;
-    }
     .hero__heading {
-      font-size: 1.7rem;
-      margin-bottom: -3rem;
-      .hero__name {
-        font-size: 3.5rem;
-      }
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 3.5rem;
+      font-family: var(--display-font);
     }
     .hero__img {
-      height: 300px;
-    }
-    .hero__info {
-      margin-top: 7rem;
-      h3 {
-        font-size: 1.9rem;
-        font-weight: 500;
-      }
+      margin-top: 5rem;
+      width: 20%;
+      margin-left: auto;
+      margin-right: auto;
     }
     .hero__social {
-      left: 0px;
-      bottom: -15%;
-      width: 20px;
-      .hero__social__indicator {
-        width: 20px;
-        p {
-          font-size: 1.2rem;
-        }
-        img {
-          max-height: 22px;
-        }
-      }
-      .hero__social__text {
-        ul {
-          li {
-            a {
-              font-size: 1.8rem;
-              margin-bottom: 1rem;
-            }
-          }
-        }
-      }
-    }
-    .hero__scrollDown {
-      right: 0;
-      width: 20px;
-      gap: 1rem;
-      p {
-        font-size: 1.3rem;
-      }
+      left: 2px;
     }
   }
 `;

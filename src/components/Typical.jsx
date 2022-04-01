@@ -3,14 +3,11 @@ import Typical from "react-typical";
 import styled from "styled-components";
 
 export default function BannerText({
-  main_title,
   title_1,
   title_2,
   title_3,
   title_4,
   title_5,
-  title_6,
-  span,
 }) {
   return (
     <TypicalStyles>
@@ -35,8 +32,8 @@ export default function BannerText({
 }
 
 const TypicalStyles = styled.div`
-  display: inline-block;
   width: 100%;
-  font-size: 3.5rem;
-  font-family: var(--display-font);
+  font-size: 2.5rem;
+  font-family: var(--main-font);
+  font-weight: 200;
 `;
