@@ -5,15 +5,24 @@ export default function Footer() {
   return (
     <FooterStyle>
       <div className="container">
+        <p>Powered By</p>
         <div className="footer__col1">
-          <h1 className="footer__col1__title">Second Footer</h1>
-          <br />
-          <button>Documentation</button>
+          <a
+            href="https://developers.idx.xyz/learn/welcome/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button>IDX Documentation</button>
+          </a>
         </div>
         <div className="footer__col2">
-          <h1 className="footer__col2__title">Second Footer</h1>
-          <br />
-          <button>Documentation</button>
+          <a
+            href="https://developers.ceramic.network/learn/welcome/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button>Ceramic Network Documentation</button>
+          </a>
         </div>
       </div>
     </FooterStyle>
@@ -21,18 +30,18 @@ export default function Footer() {
 }
 
 const FooterStyle = styled.div`
+  font-family: var(--main-font);
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   color: white;
   text-align: center;
-  background-color: blue;
-  // background-color: var(--brand-color);ß
+  background-color: #181818;
   background-position: center;
   background-size: cover;
-  padding-top: 2rem;
-  padding-bottom: 5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
   font-size: 1.5rem;
   .container {
     display: flex;
@@ -49,15 +58,14 @@ const FooterStyle = styled.div`
   .footer__col1__title,
   .footer__col2__title {
     font-size: 1.7rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
   @media only screen and (max-width: 768px) {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
     .container {
-      flex-direction: column;
-      gap: 0rem;
-      & > div {
-        margin-top: 5rem;
-      }
+      display: flex;
+      gap: 0.5rem;
     }
     .footer__col1 .para {
       max-width: 100%;

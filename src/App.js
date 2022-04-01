@@ -70,17 +70,22 @@ function App() {
   return (
     <div className="App">
       <HeroSection />
-      <input placeholder="Name" onChange={(e) => setName(e.target.value)} />
-      <input
-        placeholder="Profile Image"
-        onChange={(e) => setImage(e.target.value)}
-      />
-      <button onClick={updateProfile}>Set Profile</button>
-      <button onClick={readProfile}>Read Profile</button>
-
-      {name && <h3>{name}</h3>}
-      {image && <img style={{ width: "400px" }} src={image} alt="avatar" />}
-      {!image && !name && loaded && <h4>No profile, please create one...</h4>}
+      <div className="input__form">
+        <input placeholder="Name" onChange={(e) => setName(e.target.value)} />
+        <input
+          placeholder="Profile Image (Image URL)"
+          onChange={(e) => setImage(e.target.value)}
+        />
+      </div>
+      <div className="btn__form">
+        <button onClick={updateProfile}>Set Profile</button>
+        <button onClick={readProfile}>Read Profile</button>
+      </div>
+      <div className="result__form">
+        {name && <h3>{name}</h3>}
+        {image && <img src={image} alt="avatar" />}
+        {!image && !name && loaded && <h4>No profile, please create one...</h4>}
+      </div>
       <Footer />
     </div>
   );

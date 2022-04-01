@@ -12,6 +12,7 @@ const Typography = createGlobalStyle`
     color: var(--font-color);
   }
   *{
+    // font-family: var(--main-font);
     color: var(--font-color);
   }
 `;
