@@ -47,7 +47,11 @@ export default function HeroSection() {
               </a>
             </li>
             <li>
-              <a href="https:/heyhayssem.dev" target="_blank" rel="noreferrer">
+              <a
+                href="https://heyhayssem.dev/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaCircleNotch />
               </a>
             </li>

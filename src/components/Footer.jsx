@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <FooterStyle>
       <div className="container">
-        <p>Powered By</p>
+        <p>Check documentations for more details :</p>
         <div className="footer__col1">
           <a
             href="https://developers.idx.xyz/learn/welcome/"
